@@ -7,11 +7,11 @@ function binarySearch(arr, target) {
     let right = arr.length - 1
 
     while (left <= right) {
-        const mid = Math.floor((left + right) / 2)
-        const guess = arr[mid]
+        const mid = Math.floor((left + right) / 2)   // index
+        const guess = arr[mid]    // element on index
 
         if (guess === target) {
-            return mid    // element found
+            return mid    // index of target found
         } else if (guess < target) {
             left = mid + 1     // target's in the bigger side of an array
         } else {
