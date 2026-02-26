@@ -1,5 +1,4 @@
 // for already sorted arrays only!
-
 const arr = [1, 4, 68, 129, 1020, 1400, 2640, 9280]
 
 function binarySearch(arr, target) {
@@ -21,3 +20,18 @@ function binarySearch(arr, target) {
 
     return undefined
 }
+
+// recursion
+function factorial(n) {
+    if (n === 1) return 1;
+    return n * factorial(n - 1)
+}
+
+factorial(5)
+/* 120 = 5 * 4 * 3 * 2 * 1
+factorial(5) 
+factorial(4)
+factorial(3) 
+factorial(2)
+factorial(1)
+*/
