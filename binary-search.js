@@ -38,16 +38,16 @@ factorial(1)
 
 // selection sorting
 function selectionSort(arr) {
-    for (let i = 0; i < arr.length - 1; i++) {
+    for (let i = 0; i < arr.length - 1; i++) {    // from first to the last element
         let minIndex = i
 
-        for (let j = i + 1; j < arr.length; j++) {
+        for (let j = i + 1; j < arr.length; j++) {    // about indexes
             if (arr[j] < arr[minIndex]) {
                 minIndex = j
             }
         }
 
-        if (minIndex !== i) {
+        if (minIndex !== i) {      // switch places
             let temp = arr[i]
             arr[i] = arr[minIndex]
             arr[minIndex] = temp
@@ -56,3 +56,6 @@ function selectionSort(arr) {
 
     return arr;
 }
+
+const unsortedArr = [68, 4, 1, 129, 9280, 1020, 1400, 2640]
+selectionSort(unsortedArr)    // [1, 4, 68, 129, 1020, 1400, 2640, 9280]
