@@ -76,3 +76,11 @@ function bubbleSort(arr) {
 }
 
 bubbleSort([12, 4, 8, 3, 5, 26, 44, 1])     // [1, 3, 4, 5, 8, 12, 26, 44]
+
+// Quick sort
+function quickSort(arr) {
+    const pivotIndex = Math.floor(arr.length / 2)
+    const pivot = arr[pivotIndex]
+    const left = []
+    const right = []
+}
