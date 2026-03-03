@@ -71,6 +71,8 @@ function bubbleSort(arr) {
             }
         }
     }
-    
+
     return arr
 }
+
+bubbleSort([12, 4, 8, 3, 5, 26, 44, 1])     // [1, 3, 4, 5, 8, 12, 26, 44]
