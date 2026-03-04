@@ -80,7 +80,7 @@ bubbleSort([12, 4, 8, 3, 5, 26, 44, 1])     // [1, 3, 4, 5, 8, 12, 26, 44]
 // Quick sort
 function quickSort(arr) {
     const pivotIndex = Math.floor(arr.length / 2)
-    const pivot = arr[pivotIndex]
+    const pivot = arr[pivotIndex]      // central element
     const left = []
     const right = []
 
@@ -96,5 +96,5 @@ function quickSort(arr) {
         }
     }
 
-    return quickSort(left).concat(pivot, quickSort(right))
+    return quickSort(left).concat(pivot, quickSort(right))   // recursion to the both sides of array
 }
