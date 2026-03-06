@@ -98,3 +98,10 @@ function quickSort(arr) {
 
     return quickSort(left).concat(pivot, quickSort(right))   // recursion to the both sides of array
 }
+
+// Quick sort with points
+function partition(arr, left, right) {
+    const pivot = arr[Math.floor((left + right) / 2)]
+    let i = left - 1
+    let j = right + 1
+}
