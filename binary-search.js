@@ -113,3 +113,11 @@ function partition(arr, left, right) {
         [arr[i], arr[j]] = [arr[j], arr[i]]
     }
 }
+
+function quickSortHoare(arr, left = 0, right = arr.length - 1) {
+    if (left >= right) return;
+
+    const pivotIndex = partition(arr, left, right)
+    quickSortHoare(arr, left, pivotIndex)
+    quickSortHoare(arr, pivotIndex + 1, right)
+}
