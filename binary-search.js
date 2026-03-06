@@ -110,7 +110,7 @@ function partition(arr, left, right) {
         do { j-- } while (arr[j] > pivot);
 
         if (i >= j) return j;
-        [arr[i], arr[j]] = [arr[j], arr[i]]
+        [arr[i], arr[j]] = [arr[j], arr[i]]     // changing places: from smaller to bigger elem
     }
 }
 
@@ -118,6 +118,6 @@ function quickSortHoare(arr, left = 0, right = arr.length - 1) {
     if (left >= right) return;
 
     const pivotIndex = partition(arr, left, right)
-    quickSortHoare(arr, left, pivotIndex)
-    quickSortHoare(arr, pivotIndex + 1, right)
+    quickSortHoare(arr, left, pivotIndex)     // sorting smaller side of an array
+    quickSortHoare(arr, pivotIndex + 1, right)    // sorting bigger side
 }
