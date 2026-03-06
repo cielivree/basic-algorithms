@@ -104,4 +104,12 @@ function partition(arr, left, right) {
     const pivot = arr[Math.floor((left + right) / 2)]
     let i = left - 1
     let j = right + 1
+
+    while (true) {
+        do { i++ } while (arr[i] < pivot);
+        do { j-- } while (arr[j] > pivot);
+
+        if (i >= j) return j;
+        [arr[i], arr[j]] = [arr[j], arr[i]]
+    }
 }
