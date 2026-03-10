@@ -123,7 +123,6 @@ function quickSortHoare(arr, left = 0, right = arr.length - 1) {
 }
 
 // Linked lists
-
 class Node {
     constructor(value) {
         this.value = value
@@ -136,5 +135,29 @@ class DoublyLinkedList {
     constructor(value) {
         this.head = null
         this.tail = null
+    }
+
+    append(value) {       // add to the end
+        const newNode = new Node(value)
+
+        if (!this.head) {
+            this.head = this.tail = newNode
+        } else {
+            this.tail.next = newNode
+            newNode.prev = this.tail
+            this.tail = newNode
+        }
+    }
+
+    prepend(value) {      // add to the beginning
+
+    }
+
+    remove(value) {        // delete
+
+    }
+
+    find(value) {            // finding elem
+
     }
 }
