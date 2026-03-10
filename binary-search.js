@@ -121,3 +121,20 @@ function quickSortHoare(arr, left = 0, right = arr.length - 1) {
     quickSortHoare(arr, left, pivotIndex)     // sorting smaller side of an array
     quickSortHoare(arr, pivotIndex + 1, right)    // sorting bigger side
 }
+
+// Linked lists
+
+class Node {
+    constructor(value) {
+        this.value = value
+        this.next = null
+        this.prev = null
+    }
+}
+
+class DoublyLinkedList {
+    constructor(value) {
+        this.head = null
+        this.tail = null
+    }
+}
