@@ -161,3 +161,16 @@ class DoublyLinkedList {
 
     }
 }
+
+// Queue (FIFO - First In, First Out)
+// *adding elements always to the end, removing elements always from the start
+// enqueue(), dequeue()
+
+// Stack (LIFO - Last In, First Out)
+// adding elements always to the end, removing elements always from the end too
+// push(), pop()
+
+// Deque (Дек)
+// modifying only its head and tail
+
+// Graphs
