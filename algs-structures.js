@@ -173,4 +173,15 @@ class DoublyLinkedList {
 // Deque (Дек)
 // modifying only its head and tail
 
-// Graphs
+// Graph (G - (V, E): V - picks, E - ribs (вершини, ребра))
+// any structure: roadmap, map
+// Weighted Graph
+
+const graph = {
+    a: ['b', 'c'],
+    b: ['e'],
+    c: ['f', 'd'],
+    d: ['e'],
+    f: ['e'],
+    e: ['g']
+}
