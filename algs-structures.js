@@ -185,3 +185,23 @@ const graph = {
     f: ['e'],
     e: ['g']
 }
+
+const weightedGraph = {
+    a: { b: 3, c: 5 }, 
+    b: { c: 2, d: 7 }, 
+    c: { d: 9 }
+}
+
+const matrix = [
+    [0, 1, 1, 0],
+    [1, 0, 0, 1],
+    [1, 0, 0, 1],
+    [0, 1, 1, 0]
+]
+
+const weightedMatrix = [
+    [0, 0, 4, 5],
+    [0, 3, 7, 0],
+    [0, 0, 0, 4],
+    [0, 0, 0, 0]
+]
