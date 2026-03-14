@@ -205,3 +205,18 @@ const weightedMatrix = [
     [0, 0, 0, 4],
     [0, 0, 0, 0]
 ]
+
+// matrix is a multidimensional array!
+const simpleMatrix = [
+    [5, 3, 2, 6],
+    [7, 5, 1, 2],
+    [9, 0, 1, 5],
+    [1, 4, 6, 2]
+]
+
+// all operations with matrix
+for (let j = 0; j < simpleMatrix.length; j++) {
+    for (let i = 0; i < simpleMatrix[j].length; i++) {
+
+    }
+}
