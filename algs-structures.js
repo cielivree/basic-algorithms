@@ -177,7 +177,7 @@ class DoublyLinkedList {
 // any structure: roadmap, map
 // Weighted Graph
 
-const graph = {
+const graph0 = {
     a: ['b', 'c'],
     b: ['e'],
     c: ['f', 'd'],
@@ -220,3 +220,27 @@ for (let j = 0; j < simpleMatrix.length; j++) {
 
     }
 }
+
+// BFS search with graphs (in width)
+const graph = {
+    a: ["b", "c"],
+    b: ["e"],
+    c: ["d", "f"],
+    d: ["e"],
+    e: ["g"],
+    f: ["e"],
+    g: []
+}
+
+function bfs(graph, start) {
+    const visited = new Set();
+    const queue = [start]
+
+    while (queue.length > 0) {
+       const node = queue.shift()     // picking the first elem from the queue
+    }
+}
+
+console.log(bfs(graph, "a"))
+
+// ВFS search with graphs (in depth)
