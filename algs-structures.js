@@ -238,7 +238,16 @@ function bfs(graph, start) {
 
     while (queue.length > 0) {
        const node = queue.shift()     // picking the first elem from the queue
+
+        for (let neighbor of graph[node]) {
+            if (!visited.has(neighbor)) {
+                visited.add(neighbor)
+                queue.push(neighbor)
+            }
+        }
     }
+
+    return visited
 }
 
 console.log(bfs(graph, "a"))
