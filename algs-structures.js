@@ -235,6 +235,7 @@ const graph = {
 function bfs(graph, start) {
     const visited = new Set();
     const queue = [start]
+    visited.add(start)
 
     while (queue.length > 0) {
        const node = queue.shift()     // picking the first elem from the queue
@@ -250,6 +251,6 @@ function bfs(graph, start) {
     return visited
 }
 
-console.log(bfs(graph, "a"))
+console.log(bfs(graph, "a"))     // Set(7) { "a", "b", "c", "e", "d", "f", "g" }
 
 // ВFS search with graphs (in depth)
