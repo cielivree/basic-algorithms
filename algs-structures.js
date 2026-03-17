@@ -258,4 +258,27 @@ function bfs(graph, start, end) {
 console.log(bfs(graph, "a"))     // Set(7) { "a", "b", "c", "e", "d", "f", "g" }
 console.log(bfs(graph, "a", "g"))   // true   *there is a way*
 
-// ВFS search with graphs (in depth)
+
+// DFS search with graphs (in depth)
+function dfsIterative(graph, start) {
+    const visited = new Set();
+    const stack = [start]
+
+    while (stack.length > 0) {
+        const node = stack.pop()     // going in depth
+
+        if (!visited.has(node)) {
+            visited.add(node)
+            console.log(node)
+
+            for (let neighbor of graph[node]) {
+                if (!visited.has(neighbor)) {
+                    stack.push(neighbor)
+                }
+            }
+        }
+    }
+
+}
+
+console.log(dfsIterative(graph, "a"))
