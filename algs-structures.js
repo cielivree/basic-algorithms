@@ -232,7 +232,7 @@ const graph = {
     g: []
 }
 
-function bfs(graph, start) {
+function bfs(graph, start, end) {
     const visited = new Set();
     const queue = [start]
     visited.add(start)
@@ -241,6 +241,10 @@ function bfs(graph, start) {
        const node = queue.shift()     // picking the first elem from the queue
 
         for (let neighbor of graph[node]) {
+            if (neighbor === end) {
+                return true
+            }
+
             if (!visited.has(neighbor)) {
                 visited.add(neighbor)
                 queue.push(neighbor)
@@ -248,9 +252,10 @@ function bfs(graph, start) {
         }
     }
 
-    return visited
+    return false
 }
 
 console.log(bfs(graph, "a"))     // Set(7) { "a", "b", "c", "e", "d", "f", "g" }
+console.log(bfs(graph, "a", "g"))   // true   *there is a way*
 
 // ВFS search with graphs (in depth)
