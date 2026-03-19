@@ -282,3 +282,16 @@ function dfsIterative(graph, start) {
 }
 
 console.log(dfsIterative(graph, "a"))
+
+function dfsRecursive(graph, start, visited = new Set()) {
+    if (visited.has(start)) return
+
+    console.log(start)
+    visited.add(start)
+
+    for (const neighbor of graph[start]) {
+        dfsRecursive(graph, neighbor, visited)
+    }
+}
+
+console.log(dfsRecursive(graph, "a"))
