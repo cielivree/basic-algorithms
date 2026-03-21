@@ -283,6 +283,7 @@ function dfsIterative(graph, start) {
 
 console.log(dfsIterative(graph, "a"))
 
+// 2
 function dfsRecursive(graph, start, visited = new Set()) {
     if (visited.has(start)) return
 
@@ -295,3 +296,21 @@ function dfsRecursive(graph, start, visited = new Set()) {
 }
 
 console.log(dfsRecursive(graph, "a"))
+
+// Dijkstra's algorithm for the weighted graphs
+function dijkstra(graph, startVertex) {
+    const distances = {}
+    const visited = new Set()
+
+    return distances
+}
+
+const graphD = {
+    a: { b: 3, c: 1 },
+    b: { e: 6 },
+    c: { d: 2, f: 9 },
+    d: { e: 3 },
+    e: { g: 4 },
+    f: { e: 12 },
+    g: {}
+}
