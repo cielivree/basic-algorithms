@@ -299,8 +299,23 @@ console.log(dfsRecursive(graph, "a"))
 
 // Dijkstra's algorithm for the weighted graphs
 function dijkstra(graph, startVertex) {
-    const distances = {}
+    const distances = {}      // shortest distances from start vertex
     const visited = new Set()
+
+    for (const vertex in graphD) {
+        distances[vertex] = Infinity
+    }
+
+    distances[startVertex] = 0
+
+    while (visited.size < Object.keys(graphD).length) {
+        let closestVertex = null
+        let smallestDist = Infinity
+
+        for (const vertex in distances) {
+            
+        }
+    }
 
     return distances
 }
@@ -314,3 +329,5 @@ const graphD = {
     f: { e: 12 },
     g: {}
 }
+
+console.log(dijkstra(graphD, "a"))
