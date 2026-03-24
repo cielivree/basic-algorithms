@@ -313,8 +313,13 @@ function dijkstra(graph, startVertex) {
         let smallestDist = Infinity
 
         for (const vertex in distances) {
-            
+            if (!visited.has(vertex) && distances[vertex] < smallestDist) {
+                smallestDist = distances[vertex]
+                closestVertex = vertex
+            }
         }
+
+        if (closestVertex === null) break;
     }
 
     return distances
