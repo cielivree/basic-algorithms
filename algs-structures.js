@@ -320,6 +320,12 @@ function dijkstra(graph, startVertex) {
         }
 
         if (closestVertex === null) break;
+        visited.add(closestVertex)
+
+        for (const neighbor in graphD[closestVertex]) {
+            const weight = graphD[closestVertex][neighbor]   // b and c weights
+            const newWeight = distances[closestVertex] + weight
+        }
     }
 
     return distances
