@@ -325,6 +325,10 @@ function dijkstra(graph, startVertex) {
         for (const neighbor in graphD[closestVertex]) {
             const weight = graphD[closestVertex][neighbor]   // b and c weights
             const newWeight = distances[closestVertex] + weight
+
+            if (newWeight < distances[neighbor]) {
+                distances[neighbor] = newWeight
+            }
         }
     }
 
@@ -341,4 +345,4 @@ const graphD = {
     g: {}
 }
 
-console.log(dijkstra(graphD, "a"))
+console.log(dijkstra(graphD, "a"))    // { a: 0, b: 3, c: 1, d: 3, e: 6, f: 10, g: 10 }
