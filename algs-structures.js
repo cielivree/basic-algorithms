@@ -327,7 +327,7 @@ function dijkstra(graph, startVertex) {
             const newWeight = distances[closestVertex] + weight
 
             if (newWeight < distances[neighbor]) {
-                distances[neighbor] = newWeight
+                distances[neighbor] = newWeight    // replacing longer ways to shorter
             }
         }
     }
@@ -346,3 +346,6 @@ const graphD = {
 }
 
 console.log(dijkstra(graphD, "a"))    // { a: 0, b: 3, c: 1, d: 3, e: 6, f: 10, g: 10 }
+console.log(dijkstra(graphD, "c"))    // { a: Infinity, b: Infinity, c: 0, d: 2, e: 5, f: 9, g: 9 }
+console.log(dijkstra(graphD, "e"))    // { a: Infinity, b: Infinity, c: Infinity, d: Infinity, e: 0, f: Infinity, g: 4 }
+
