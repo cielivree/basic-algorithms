@@ -301,9 +301,11 @@ console.log(dfsRecursive(graph, "a"))
 function dijkstra(graph, startVertex) {
     const distances = {}      // shortest distances from start vertex
     const visited = new Set()
+    const prev = {}
 
     for (const vertex in graphD) {
         distances[vertex] = Infinity
+        prev[vertex] = null
     }
 
     distances[startVertex] = 0
@@ -328,11 +330,12 @@ function dijkstra(graph, startVertex) {
 
             if (newWeight < distances[neighbor]) {
                 distances[neighbor] = newWeight    // replacing longer ways to shorter
+                prev[neighbor] = closestVertex;
             }
         }
     }
 
-    return distances
+    return { distances, prev }
 }
 
 const graphD = {
@@ -348,4 +351,29 @@ const graphD = {
 console.log(dijkstra(graphD, "a"))    // { a: 0, b: 3, c: 1, d: 3, e: 6, f: 10, g: 10 }
 console.log(dijkstra(graphD, "c"))    // { a: Infinity, b: Infinity, c: 0, d: 2, e: 5, f: 9, g: 9 }
 console.log(dijkstra(graphD, "e"))    // { a: Infinity, b: Infinity, c: Infinity, d: Infinity, e: 0, f: Infinity, g: 4 }
+
+// trees
+// binary search tree
+class Node {
+    constructor(value) {
+        this.value = value
+        this.left = null
+        this.right = null
+    }
+}
+
+class BinarySearchTree {
+    constructor() {
+        this.root = null
+    }
+
+    insert(value) {
+        const newNode = new Node(value)
+        if (!this.root) {
+            this.root = newNode
+            return;
+        }
+    }
+}
+
 
