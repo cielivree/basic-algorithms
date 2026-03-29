@@ -393,7 +393,14 @@ class BinarySearchTree {
                 current = current.right
             }
         }
-       
+    }
+
+    search(value) {
+        let current = this.root
+
+        while (current) {
+            if (value === current.value) return true
+        }
     }
 }
 
