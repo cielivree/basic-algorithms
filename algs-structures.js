@@ -373,6 +373,27 @@ class BinarySearchTree {
             this.root = newNode
             return;
         }
+
+        let current = this.root
+
+        while (true) {
+            if (value < current.value) {
+                if (!current.left) {
+                    current.left = newNode   // left subtree
+                    return;
+                }
+
+                current = current.left
+            } else {
+                if (!current.right) {
+                    current.right = newNode    // right subtree
+                    return;
+                }
+
+                current = current.right
+            }
+        }
+       
     }
 }
 
