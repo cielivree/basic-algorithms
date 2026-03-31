@@ -400,7 +400,10 @@ class BinarySearchTree {
 
         while (current) {
             if (value === current.value) return true
+            current = value < current.value ? current.left : current.right
         }
+
+        return false
     }
 }
 
