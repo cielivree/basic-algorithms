@@ -405,6 +405,25 @@ class BinarySearchTree {
 
         return false
     }
+
+    printVisual(node = this.root, prefix = '', isLeft = true) {
+        if (!node) return
+
+        // starting from the right subtree
+        if (node.right) {
+            this.printVisual(node.right, prefix + (isLeft ? '|    ' : '    ' ), false)
+        }
+
+        // current node
+        console.log(prefix + (isLeft ? '|___' : '|----') + node.value) 
+
+        // left subtree
+        if (node.left) {
+            this.printVisual(node.left, prefix + (isLeft ? '    ' : '|    '), true)
+        }
+    }
 }
+
+
 
 
