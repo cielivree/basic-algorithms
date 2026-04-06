@@ -424,17 +424,44 @@ class BinarySearchTree {
     }
 }
 
-const tree = new BinarySearchTree()
+const treeBinary = new BinarySearchTree()
 
-tree.insert(3)
-tree.insert(5)
-tree.insert(7)
-tree.insert(1)
-tree.insert(4)
-tree.insert(6)
-tree.insert(11)
-tree.insert(4)
+treeBinary.insert(3)
+treeBinary.insert(5)
+treeBinary.insert(7)
+treeBinary.insert(1)
+treeBinary.insert(4)
+treeBinary.insert(6)
+treeBinary.insert(11)
+treeBinary.insert(4)
 
-tree.printVisual()
+treeBinary.printVisual()
+
+// N-tree
+const expectedSum = 59
+
+const tree = [{
+    value: 5,
+    children: [
+        {
+            value: 4,
+            children: [
+                { value: 7, children: [] },
+                { value: 11, children: [{ value: 5, children: [] }]}
+            ]
+        }, 
+        {
+            value: 3, 
+            children: [{ value: 4, children: [] }]
+        }, 
+        {
+            value: 7,
+            children: [
+                { value: 1, children: [] },
+                { value: 12, children: [] }
+            ]
+        }
+    ]
+}]
 
 
