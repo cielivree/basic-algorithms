@@ -464,4 +464,12 @@ const tree = [{
     ]
 }]
 
+function recursiveN(tree) { }
+
+function iterativeN(tree) { }
+
+console.log(recursiveN(tree))
+console.log(iterativeN(tree))
+
+
 
