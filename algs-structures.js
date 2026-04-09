@@ -481,7 +481,7 @@ function recursiveN(tree) {
 
 function iterativeN(tree) { }
 
-console.log(recursiveN(tree))
+console.log(recursiveN(tree))    // 59
 console.log(iterativeN(tree))
 
 
