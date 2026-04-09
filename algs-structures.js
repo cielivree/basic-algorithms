@@ -464,7 +464,20 @@ const tree = [{
     ]
 }]
 
-function recursiveN(tree) { }
+function recursiveN(tree) {
+    let sum = 0
+
+    if (!tree.length) {
+        return sum
+    }
+
+    for (const node of tree) {
+        sum += node.value
+        sum += recursiveN(node.children)
+    }
+
+    return sum
+}
 
 function iterativeN(tree) { }
 
