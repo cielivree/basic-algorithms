@@ -479,14 +479,25 @@ function recursiveN(tree) {
     return sum
 }
 
+// 1. [5]
+// 2. [4, 3, 7]
+// 3. [4, 3, 1, 12]
+
 function iterativeN(tree) {
     let sum = 0
+    const stack = [...tree]
+
+    while (stack.length) {
+        const node = stack.pop()    // getting main nodes of the tree
+        sum += node.value
+        stack.push(node.children)
+    }
 
     return sum
 }
 
 console.log(recursiveN(tree))    // 59
-console.log(iterativeN(tree))
+console.log(iterativeN(tree))     // 59
 
 
 
