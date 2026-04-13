@@ -479,7 +479,11 @@ function recursiveN(tree) {
     return sum
 }
 
-function iterativeN(tree) { }
+function iterativeN(tree) {
+    let sum = 0
+
+    return sum
+}
 
 console.log(recursiveN(tree))    // 59
 console.log(iterativeN(tree))
